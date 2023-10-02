@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.slider {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    animation: animate 25s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+}
+
+@keyframes animate{
+    33%{
+        background-image: url(media/Abre-la-inscripcion-a-los-cursos-virtuales-del-Centro.jpg);
+        background-size: cover;
+    }
+    66%{
+        background-image: url(media/mujer-auriculares-concentrada-curso-ordenador.jpg);
+        background-size: cover;
+    }
+    100%{
+        background-image: url(media/Programacion2.jpg);
+        background-size: cover;
+    }}
