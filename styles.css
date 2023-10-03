@@ -4,41 +4,40 @@ body {
     overflow: hidden;
 }
 
-.slider-container {
-    position: relative;
+.carousel-container {
     width: 100%;
     height: 100vh;
     display: flex;
     overflow: hidden;
 }
 
-.slider {
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    animation: animate 25s infinite;
+.carousel-slide {
+    flex: 0 0 100%;
+    transition: transform 1s ease; /* Transición de las diapositivas */
     display: flex;
     align-items: center;
-    justify-content: center;
+    position: relative;
 }
 
-.slide-content {
-    text-align: center;
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio sin distorsión */
+}
+
+.carousel-text {
+    position: absolute;
+    top: 20; /* Alineamos el texto en la parte superior */
+    left:0; /* Alineamos el texto a la izquierda */
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
+    font-family: 'Lucida Sans';
+    font-size: large;
     padding: 10px;
 }
 
-@keyframes animate{
-    33%{
-        background-image: url(media/Abre-la-inscripcion-a-los-cursos-virtuales-del-Centro.jpg);
-        background-size: cover;
+   
+    .nav-links.show {
+        display: flex !important;
     }
-    66%{
-        background-image: url(media/mujer-auriculares-concentrada-curso-ordenador.jpg);
-        background-size: cover;
-    }
-    100%{
-        background-image: url(media/Programacion2.jpg);
-        background-size: cover;
-    }}
+
